@@ -1,0 +1,33 @@
+<p>
+  <strong>Name:</strong>
+    <%= @student.student_name %>
+</p>
+ 
+<p>
+  <strong>Roll Number:</strong>
+    <%= @student.roll_number %>
+</p>
+<p>
+  <strong>Department:</strong>
+    <%= @student.department %>
+</p>
+ 
+<p>
+  <strong>Address:</strong>
+    <%= @student.address %>
+</p>
+<p>
+  <strong>Email:</strong>
+    <%= @student.email %>
+</p>
+<p>
+  <strong>Description(About Me):</strong>
+    <%= @student.about_me %>
+</p>
+<p>
+  <strong>Your Unique Passkey:</strong>
+    <%= @student.unique_passkey %>
+</p>
+<%= link_to 'Student List', students_path %><br>
+<%= link_to 'Make Another Entry', new_student_path %><br>
+<%= link_to 'Home', controller: 'welcome' %><br>

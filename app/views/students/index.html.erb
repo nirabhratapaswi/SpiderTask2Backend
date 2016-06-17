@@ -1,0 +1,28 @@
+<h1>Listing Students</h1>
+ 
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Roll Number</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Description</th>
+        <th>Unique Passkey</th>
+        <th>Delete/Destroy</th>
+    </tr>
+ 
+    <% @student.order("roll_number ASC").each do |student| %>
+    <tr>
+        <td><%= student.student_name %></td>
+        <td><%= student.roll_number %></td>
+        <td><%= student.department %></td>
+        <td><%= student.email %></td>
+        <td><%= student.address %></td>
+        <td><%= student.about_me %></td>
+        <td><%= student.unique_passkey %></td>
+        <td><%= link_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+    <%= link_to 'Make New Entry', new_student_path %>
+</table>

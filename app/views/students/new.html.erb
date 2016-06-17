@@ -1,0 +1,47 @@
+<%= form_for :student, url: students_path do |s| %>
+
+<% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+          <%= pluralize(@student.errors.count, "error") %> prohibited
+        this student entry from being saved:
+      </h2>
+      <ul>
+          <% @student.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<p>
+    <%= s.label :student_name %><br>
+    <%= s.text_field :student_name %>
+</p>
+<p>
+    <%= s.label :roll_number %><br>
+    <%= s.text_field :roll_number %>
+</p>
+<p>
+    <%= s.label :department %><br>
+    <%= s.text_field :department %>
+</p>
+<p>
+    <%= s.label :email %><br>
+    <%= s.text_field :email %>
+</p>
+<p>
+    <%= s.label :address %><br>
+    <%= s.text_area :address %>
+</p>
+<p>
+    <%= s.label :about_me %><br>
+    <%= s.text_field :about_me %>
+</p>
+<p>
+    <%= s.submit :'Save Record' %>
+</p>
+
+<%= link_to 'Student List', students_path %><br>
+<%= link_to 'Home', controller: 'welcome' %><br>
+<% end %>
