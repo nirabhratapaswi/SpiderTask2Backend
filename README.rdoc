@@ -1,28 +1,18 @@
-== README
+Clone this folder to Sites in C: (C\Sites)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You should have rails (version > 4) and Ruby (version > 1.8 -- comes with rails)
 
-Things you may want to cover:
+The database has exactly the same columns as instructed
 
-* Ruby version
+In git bash go to C:\Sites\spider2
 
-* System dependencies
+run command->
+	$ bin/rails server
 
-* Configuration
+This will start the local server
 
-* Database creation
+Open browser and go to http://localhost:3000 (or simply localhost:3000)
 
-* Database initialization
+Click on link "Student" to change controller to 'Student' (simply, to see the database and CRUD in it)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Follow Respective Links to Create, Delete the data
